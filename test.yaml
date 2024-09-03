@@ -1,18 +1,9 @@
 - name: variables to print
   hosts: web
   vars: 
-  - var.yaml
+  - vars.yaml
   tasks:
    - name: print information
      ansible.builtin.debug:
         msg: "my name {{name}} and my age is {{Age}}"
    
-- name: variables to print
-  hosts: web
-  vars: 
-  - var.yaml
-  tasks:
-   - name: print information
-     ansible.builtin.debug:
-        msg: "my name {{name}} and my age is {{Age}}"
-      
