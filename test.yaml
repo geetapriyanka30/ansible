@@ -7,14 +7,14 @@
       ansible.builtin.debug:
         msg: "my name {{ name }} and my age is {{ Age }}"
 
----
-- name: Variables to print
-  hosts: web
-  vars_files:
-    - vars.yaml
-  tasks:
-    - name: Print information
-      ansible.builtin.debug:
-        msg: "My name is {{ name }} and my age is {{ Age }}"
+# ---
+# - name: Variables to print
+#   hosts: web
+#   vars_files:
+#     - vars.yaml
+#   tasks:
+#     - name: Print information
+#       ansible.builtin.debug:
+#         msg: "My name is {{ name }} and my age is {{ Age }}"
 
    
