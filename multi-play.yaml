@@ -5,4 +5,8 @@
     ansible.builtin.debug:
 
 
-
+- name: play2
+  hosts: web
+  tasks: 
+  - name: #play2 and task1
+    ansible.builtin.debug:
