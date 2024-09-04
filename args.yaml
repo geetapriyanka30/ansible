@@ -1,13 +1,27 @@
-- name: loop demo
+- name: loops demo
   host: web
   become: yes
   tasks: 
-   name: install packages
-   ansible.builtin.package:
-     name: {{ item }}
-     state: present
-     loop:
+  - name: install packages
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present
+      loop:
        - nginx
        - postgress
        - mysql
 
+
+# - name: loops demo
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: install packages
+#     ansible.builtin.package:
+#       name: "{{ item }}"
+#       state: present 
+#     loop:
+#     - mysql
+#     - nginx
+#     - postfix
+#     - httpd
