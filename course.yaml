@@ -5,10 +5,10 @@
    course: AWS
    Duration: 120HRS
    topics:
-    -shell
-    -ansible
-    -terraform
-    -k8
+    - shell
+    - ansible
+    - terraform
+    - k8
    live: yes
    tools:
     AWS: jenkins
