@@ -1,19 +1,18 @@
 - name: Course information
   hosts: local
   connection: local
-  vars: 
-   course: AWS
-   Duration: 120HRS
-   topics:
-    - shell
-    - ansible
-    - terraform
-    - k8
-   live: yes
-   tools:
-    AWS: jenkins
-   tasks:
-   - name: print the course informtion
-     ansible.built.in.debug:
-      ex: I have {{ course }} with {{ Duration }} ,live {{ live }} with topics {{ topics }}
-        using tools {{ tools }}
+  vars:
+    course: AWS
+    Duration: 120HRS
+    topics:
+      - shell
+      - ansible
+      - terraform
+      - k8
+    live: yes
+    tools:
+      AWS: jenkins
+  tasks:
+    - name: Print the course information
+      ansible.builtin.debug:
+        msg: "I have {{ course }} with {{ Duration }}, live {{ live }}, with topics {{ topics }}, using tools {{ tools }}"
